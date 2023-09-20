@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: otus-kubernetes-basics-homework-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: otus-kubernetes-basics-homework
+  template:
+    metadata:
+      labels:
+        app: otus-kubernetes-basics-homework
+    spec:
+      containers:
+      - name: otus-kubernetes-basics-homework
+        image: uriahas/otus-docker-basics-homework
+        ports:
+        - containerPort: 8000
+          name: http
