@@ -82,3 +82,9 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+env:
+- name: PORT
+  value: "80"
+- name: DB_NAME
+  value: "postgres"
