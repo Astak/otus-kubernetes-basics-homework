@@ -28,6 +28,12 @@ spec:
           mountPath: /bin/config.yml
           subPath: config.yml
           readOnly: true
+        env:
+        - name: APP_DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db
+              key: password
       volumes:
       - name: config
         configMap:
