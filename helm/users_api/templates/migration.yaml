@@ -22,3 +22,11 @@ spec:
         image: {{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}
         args:
         - --migration
+        volumeMounts:
+        - name: config
+          mountPath: /bin
+          readOnly: true
+      volumes:
+      - name: config
+        configMap:
+          name: config
