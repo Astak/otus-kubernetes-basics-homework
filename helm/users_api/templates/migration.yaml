@@ -24,7 +24,7 @@ spec:
         - --migration
         volumeMounts:
         - name: config
-          mountPath: /bin
+          mountPath: /bin/config.yml
           subPath: config.yml
           readOnly: true
       volumes:
