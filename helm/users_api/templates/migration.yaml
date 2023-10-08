@@ -20,10 +20,5 @@ spec:
       containers:
       - name: {{ .Chart.Name }}-migrate
         image: {{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}
-        env:
-          {{- range .Values.env }}
-          - name: {{ .name }}
-            value: {{ .value | quote }}
-          {{- end}}
         args:
         - --migration
