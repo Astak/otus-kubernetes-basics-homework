@@ -50,7 +50,7 @@ ingress:
     - host: arch.homework
       paths:
         - path: /()(.*)
-          pathType: Prefix
+          pathType: ImplementationSpecific
         - path: /otusapp/uriah/(/|$)(.*)
           pathType: ImplementationSpecific
   tls: []
