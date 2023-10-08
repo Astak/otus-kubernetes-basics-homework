@@ -25,6 +25,7 @@ spec:
         volumeMounts:
         - name: config
           mountPath: /bin
+          subPath: config.yml
           readOnly: true
       volumes:
       - name: config
