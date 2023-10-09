@@ -74,4 +74,3 @@ spec:
       - name: config
         configMap:
           name: config
-  backoffLimit: 1

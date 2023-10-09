@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: {{ .Release.Name }}-migrate-{{ .Chart.Version }}
+  name: {{ .Release.Name }}-migrate-{{ .Chart.Version | replace "." "_" }}
   labels:
     helm.sh/chart: {{ .Chart.Name }}--{{ .Chart.Version }}
   annotations:
