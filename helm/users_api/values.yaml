@@ -82,3 +82,6 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+dbSecret: db-user-pass
+appConfig: config
