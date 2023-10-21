@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: "{{ .Release.Name }}-migrate-{{ now | unixEpoch }}"
+  name: "{{ .Release.Name }}-migrate-{{ .Chart.Version}}"
   labels:
     helm.sh/chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
   annotations:
